@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Pipes</h1>
+      <p>{{ myText | uppercase }}</p>
+      <p>{{ myText | slice:2:7 | uppercase }}</p>
+      <p>{{ myDate | date:"dd.MM.yyyy" }}</p>
+      <hr>
+      <input type="text" #input (keyup)="0">
+      <p>{{ input.value | multiply:3 }}</p>
+      <ul>
+        <li *ngFor="let element of myList | filter:'brot'">{{ element }}</li>
+      </ul>
+      <button type="button" class="btn btn-primary" (click)="myList.push('Käsebrot')">Käsebrot</button>
+    </div>
+  </div>
+</div>
